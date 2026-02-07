@@ -1,0 +1,174 @@
+:root {
+    --accent: #0ea5a4;
+    --muted: #6b7280
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    margin: 0;
+    background: #f8fafc;
+    color: #0f172a
+}
+
+.container {
+    max-width: 1100px;
+    margin: 32px auto;
+    padding: 24px
+}
+
+header .timer-wrap {
+    background: var(--accent);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    width: fit-content;
+    margin: 0 auto 12px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+header .timer-wrap #remaining {
+    color: white;
+    background-color: var(--muted);
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+header h1 {
+    margin: 0 0 8px
+}
+
+.lead {
+    color: var(--muted);
+    margin-top: 0
+}
+
+.toolbar {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin: 16px 0
+}
+
+.progress-wrap {
+    flex: 1
+}
+
+.progress-info {
+    font-weight: 600;
+    margin-bottom: 8px
+}
+
+.progress {
+    background: #e6eef0;
+    border-radius: 999px;
+    height: 12px;
+    overflow: hidden
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), #06b6d4);
+    width: 0%;
+    transition: width .25s
+}
+
+.controls button {
+    margin-right: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    background: white;
+    cursor: pointer
+}
+
+.controls button:hover {
+    filter: brightness(.98)
+}
+
+.content {
+    display: flex;
+    gap: 24px
+}
+
+.left {
+    flex: 0 0 420px
+}
+
+.right {
+    flex: 1
+}
+
+#nav-input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb
+}
+
+.source-nav {
+    background: white;
+    border: 1px solid #e5e7eb;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 8px;
+    max-height: 260px;
+    overflow: auto
+}
+
+section h2 {
+    margin: 12px 0
+}
+
+.section {
+    background: white;
+    border: 1px solid #e5e7eb;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 12px
+}
+
+.section h3 {
+    margin: 0 0 8px;
+    font-size: 16px
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px;
+    border-radius: 6px
+}
+
+.item label {
+    cursor: pointer
+}
+
+.muted {
+    color: var(--muted)
+}
+
+footer {
+    margin-top: 28px;
+    color: var(--muted)
+}
+
+small.muted {
+    display: block
+}
+
+@media (max-width:900px) {
+    .content {
+        flex-direction: column
+    }
+
+    .left {
+        flex: unset
+    }
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Laravel Docs Learning Tracker</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <main class="container">
+            <header>
+                <div class="timer-wrap">
+                    <div id="timer">Remaining time: <span id="remaining">--</span></div>
+                </div>
+                <h1>Laravel Docs Learning Tracker ✅</h1>
+                <p class="lead">Track which documentation pages you've completed. Uses <strong>localStorage</strong>.
+                </p>
+            </header>
+
+            <section class="toolbar">
+                <div class="progress-wrap">
+                    <div class="progress-info"><span id="completed-count">0</span> / <span id="total-count">0</span>
+                        completed</div>
+                    <div class="progress" aria-hidden>
+                        <div id="progress-bar" class="progress-bar" style="width:0%"></div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <!-- Load button removed — checklist is fixed -->
+                    <button id="export">Export JSON</button>
+                    <button id="import">Import JSON</button>
+                </div>
+            </section>
+
+            <section class="content">
+                <div class="right">
+                    <h2>Your learning checklist</h2>
+                    <div id="list"></div>
+                </div>
+            </section>
+
+            <footer>
+                <small class="muted">Built with vanilla JavaScript • Stores progress in localStorage</small>
+            </footer>
+        </main>
+
+        <script src="js/app.js" defer></script>
+    </body>
+
+</html>
