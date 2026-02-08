@@ -287,6 +287,7 @@ function render(sections) {
     document.getElementById('total-count').textContent = total;
     document.getElementById('completed-count').textContent = completed;
     const pct = total ? Math.round((completed / total) * 100) : 0;
+    document.getElementById('progress-percentage').textContent = pct;
     document.getElementById('progress-bar').style.width = pct + '%';
 
     // determine the next incomplete id (first id not in state)
